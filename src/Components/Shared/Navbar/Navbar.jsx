@@ -7,9 +7,9 @@ const Navbar = () => {
 
   const handleLogOut = () => {
     logOut()
-    .then(()=>{})
-    .catch(error=>console.log(error))
-  }
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -37,7 +37,7 @@ const Navbar = () => {
             {user && (
               <>
                 <li>
-                  <Link to='/'>Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
 
                 <li>
@@ -52,7 +52,7 @@ const Navbar = () => {
               </>
             )}
             <li>
-              <a>Blogs</a>
+              <Link to="/blog">Blogs</Link>
             </li>
           </ul>
         </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
           {user && (
             <>
               <li>
-                <Link to='/'>Home</Link>
+                <Link to="/">Home</Link>
               </li>
 
               <li>
@@ -75,19 +75,22 @@ const Navbar = () => {
                 <a>My Toys</a>
               </li>
               <li>
-                <a>Add a Toy</a>
+                <Link to="/addToy">Add a Toy</Link>
               </li>
             </>
           )}
           <li>
-            <a>Blogs</a>
+            <Link to="/blog">Blogs</Link>
           </li>
         </ul>
       </div>
 
       <div className="navbar-end">
         {user && (
-          <div className="tooltip  tooltip-left" data-tip={user?.displayName || 'no name found'}>
+          <div
+            className="tooltip  tooltip-left"
+            data-tip={user?.displayName || "no name found"}
+          >
             <div className="avatar">
               <div className="w-10 me-2 rounded-full ring-2 ring-offset-base-100 ring-offset-2 ">
                 <img src={user?.photoURL || " "} />

@@ -1,0 +1,44 @@
+{
+  "marvel": [
+    {
+      "image": "https://example.com/marvel/toy1.jpg",
+      "name": "Iron Man",
+      "price": "$19.99",
+      "rating": 4.5
+    },
+    {
+      "image": "https://example.com/marvel/toy2.jpg",
+      "name": "Spider-Man",
+      "price": "$24.99",
+      "rating": 4.8
+    }
+  ],
+  "star_wars": [
+    {
+      "image": "https://example.com/starwars/toy1.jpg",
+      "name": "Darth Vader",
+      "price": "$29.99",
+      "rating": 4.7
+    },
+    {
+      "image": "https://example.com/starwars/toy2.jpg",
+      "name": "Luke Skywalker",
+      "price": "$22.99",
+      "rating": 4.6
+    }
+  ],
+  "dc": [
+    {
+      "image": "https://example.com/dc/toy1.jpg",
+      "name": "Batman",
+      "price": "$27.99",
+      "rating": 4.4
+    },
+    {
+      "image": "https://example.com/dc/toy2.jpg",
+      "name": "Superman",
+      "price": "$26.99",
+      "rating": 4.2
+    }
+  ]
+}
