@@ -1,44 +1,79 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../Authprovider/AuthProvider";
+import { Link } from "react-router-dom";
 
 const MyToys = () => {
   const [addedToys, setAddedToys] = useState([]);
-  console.log(addedToys);
+  const { user } = useContext(AuthContext);
+
+  // console.log(addedToys);
 
   useEffect(() => {
-    fetch("http://localhost:5000/addedToys/nrtusher1@gmail.com")
+    fetch(`http://localhost:5000/addedToys/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setAddedToys(data));
   }, []);
+
+  const handleDelete = (id) => {
+    fetch(`http://localhost:5000/addedToys/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          const newToys = addedToys.filter((event) => event._id !== id);
+          setAddedToys(newToys);
+        }
+      });
+  };
+
+  // modal here
+
+  // const handleUpdate = (event) => {
+  //   event.preventDefault();
+  //   const form = event.target;
+  //   const name = form.name.value;
+  //   console.log(name);
+  // };
+
   return (
-    <>
-      <div >
-        <div className="overflow-x-auto ">
-          <table className="table w-full ">
-            <thead>
-              <tr>
-                <th>Product Serial</th>
-                <th>Toys Name</th>
-                <th>Toys Category</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {addedToys.map((toyInfo, index) => (
-                <tr className="hover">
-                  <th>{index + 1}</th>
-                  <td>{toyInfo.name}</td>
-                  <td>{toyInfo.category}</td>
-                  <td>
-                    <button className="btn">Delete</button>{" "}
-                    <button className="btn">Edit</button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </>
+    <div>
+      <h1 className="font-semibold text-3xl m-10">
+        All of your selected toys are here given below..
+      </h1>
+      <table className="table mx-auto">
+        <thead>
+          <tr>
+            <th>Product Serial</th>
+            <th>Toys Name</th>
+            <th>Toys Category</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {addedToys.map((toyInfo, index) => (
+            <tr key={toyInfo._id} className="hover">
+              <th>{index + 1}</th>
+              <td>{toyInfo.name}</td>
+              <td>{toyInfo.category}</td>
+              <td>
+                <button
+                  onClick={() => handleDelete(toyInfo._id)}
+                  className="btn me-2"
+                >
+                  Delete
+                </button>
+                <>
+                  <Link to={`/updateToyData/${toyInfo._id}`} className="btn">
+                    Edit
+                  </Link>
+                </>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
