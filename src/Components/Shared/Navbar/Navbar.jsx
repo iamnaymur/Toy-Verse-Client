@@ -52,16 +52,6 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       isActive ? "bg-yellow-400" : "default"
                     }
-                    to="/alltoys"
-                  >
-                    All Toys
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className={({ isActive }) =>
-                      isActive ? "bg-yellow-400" : "default"
-                    }
                     to="/mytoys"
                   >
                     My Toys
@@ -87,6 +77,16 @@ const Navbar = () => {
                 to="/blogs"
               >
                 Blogs
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "bg-yellow-400" : "default"
+                }
+                to="/alltoys"
+              >
+                All Toys
               </NavLink>
             </li>
           </ul>
@@ -115,16 +115,6 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive ? "bg-yellow-400" : "default"
                   }
-                  to="/alltoys"
-                >
-                  All Toys
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "bg-yellow-400" : "default"
-                  }
                   to="/mytoys"
                 >
                   My Toys
@@ -142,6 +132,16 @@ const Navbar = () => {
               </li>
             </>
           )}
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "bg-yellow-400" : "default"
+              }
+              to="/alltoys"
+            >
+              All Toys
+            </NavLink>
+          </li>
           <li>
             <NavLink
               className={({ isActive }) =>
