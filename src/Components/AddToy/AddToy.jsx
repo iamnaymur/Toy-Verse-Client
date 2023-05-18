@@ -38,8 +38,8 @@ const AddToy = () => {
       .then((data) => console.log(data));
   };
   return (
-    <div className="mt-10 text-xl text-center">
-      <div>
+    <div className="mt-10 text-xl text-center space-y-10">
+      <div className="space-y-10">
         <h1 className="text-3xl font-semibold">
           What are you waiting for? <br /> Add your desired toy here.
         </h1>
@@ -55,7 +55,7 @@ const AddToy = () => {
         <div>
           <form
             onSubmit={handleAddToy}
-            className="card-body space-y-2 grid grid-cols-1 text-start font-semibold w-3/5 mx-auto "
+            className="space-y-2 text-start font-semibold md:w-3/5 mx-auto mb-10"
           >
             <div>
               <label>

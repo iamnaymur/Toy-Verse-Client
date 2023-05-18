@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Authprovider/AuthProvider";
 
 const Navbar = () => {
@@ -37,22 +37,57 @@ const Navbar = () => {
             {user && (
               <>
                 <li>
-                  <Link to="/">Home</Link>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "bg-yellow-400" : "default"
+                    }
+                    to="/"
+                  >
+                    Home
+                  </NavLink>
                 </li>
 
                 <li>
-                  <a>All Toys</a>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "bg-yellow-400" : "default"
+                    }
+                    to="/alltoys"
+                  >
+                    All Toys
+                  </NavLink>
                 </li>
                 <li>
-                  <a>My Toys</a>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "bg-yellow-400" : "default"
+                    }
+                    to="/mytoys"
+                  >
+                    My Toys
+                  </NavLink>
                 </li>
                 <li>
-                  <a>Add a Toy</a>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "bg-yellow-400" : "default"
+                    }
+                    to="/addToy"
+                  >
+                    Add a Toy
+                  </NavLink>
                 </li>
               </>
             )}
             <li>
-              <Link to="/blog">Blogs</Link>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "bg-yellow-400" : "default"
+                }
+                to="/blogs"
+              >
+                Blogs
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -65,22 +100,57 @@ const Navbar = () => {
           {user && (
             <>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "bg-yellow-400" : "default"
+                  }
+                  to="/"
+                >
+                  Home
+                </NavLink>
               </li>
 
               <li>
-                <a>All Toys</a>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "bg-yellow-400" : "default"
+                  }
+                  to="/alltoys"
+                >
+                  All Toys
+                </NavLink>
               </li>
               <li>
-                <a>My Toys</a>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "bg-yellow-400" : "default"
+                  }
+                  to="/mytoys"
+                >
+                  My Toys
+                </NavLink>
               </li>
               <li>
-                <Link to="/addToy">Add a Toy</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "bg-yellow-400" : "default"
+                  }
+                  to="/addToy"
+                >
+                  Add a Toy
+                </NavLink>
               </li>
             </>
           )}
           <li>
-            <Link to="/blog">Blogs</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "bg-yellow-400" : "default"
+              }
+              to="/blogs"
+            >
+              Blogs
+            </NavLink>
           </li>
         </ul>
       </div>
