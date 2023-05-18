@@ -1,12 +1,14 @@
 import React from 'react';
 import ToyCategory from './ToyCategory/ToyCategory';
 import Banner from './Banner/Banner';
+import MarvelSection from './MarvelSection/MarvelSection';
 
 const HomePage = () => {
     return (
         <div>
-            <h1 className='text-5xl '>This is home</h1>
+            
             <Banner></Banner>
+            <MarvelSection></MarvelSection>
             <ToyCategory></ToyCategory>
         </div>
     );

@@ -11,9 +11,9 @@ const Navbar = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar text-white" style={{ backgroundColor: "#FF7F50" }}>
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown" style={{ backgroundColor: "#FF7F50" }}>
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -32,14 +32,15 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box bold w-52"
+            style={{ backgroundColor: "#FF7F50" }}
           >
             {user && (
               <>
                 <li>
                   <NavLink
                     className={({ isActive }) =>
-                      isActive ? "bg-yellow-400" : "default"
+                      isActive ? "bg-indigo-500" : "default"
                     }
                     to="/"
                   >
@@ -50,7 +51,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     className={({ isActive }) =>
-                      isActive ? "bg-yellow-400" : "default"
+                      isActive ? "bg-indigo-500" : "default"
                     }
                     to="/mytoys"
                   >
@@ -60,7 +61,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     className={({ isActive }) =>
-                      isActive ? "bg-yellow-400" : "default"
+                      isActive ? "bg-indigo-500" : "default"
                     }
                     to="/addToy"
                   >
@@ -72,7 +73,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "bg-yellow-400" : "default"
+                  isActive ? "bg-indigo-500" : "default"
                 }
                 to="/blogs"
               >
@@ -82,7 +83,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "bg-yellow-400" : "default"
+                  isActive ? "bg-indigo-500" : "default"
                 }
                 to="/alltoys"
               >
@@ -91,18 +92,18 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
-          Toy VERSE
+        <Link to="/" className="font-semibold normal-case text-3xl">
+          ToyVerse
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+      <div className="navbar-center hidden lg:flex ">
+        <ul className="menu menu-horizontal px-1 bold">
           {user && (
             <>
               <li>
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "bg-yellow-400" : "default"
+                    isActive ? "bg-indigo-500" : "default"
                   }
                   to="/"
                 >
@@ -113,7 +114,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "bg-yellow-400" : "default"
+                    isActive ? "bg-indigo-500" : "default"
                   }
                   to="/mytoys"
                 >
@@ -123,7 +124,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "bg-yellow-400" : "default"
+                    isActive ? "bg-indigo-500" : "default"
                   }
                   to="/addToy"
                 >
@@ -135,7 +136,7 @@ const Navbar = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? "bg-yellow-400" : "default"
+                isActive ? "bg-indigo-500" : "default"
               }
               to="/alltoys"
             >
@@ -145,7 +146,7 @@ const Navbar = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? "bg-yellow-400" : "default"
+                isActive ? "bg-indigo-500" : "default"
               }
               to="/blogs"
             >
@@ -169,11 +170,14 @@ const Navbar = () => {
           </div>
         )}
         {user ? (
-          <button onClick={handleLogOut} className="btn">
+          <button
+            onClick={handleLogOut}
+            className="btn bg-indigo-500 border-none"
+          >
             Logout
           </button>
         ) : (
-          <Link to="/login" className="btn">
+          <Link to="/login" className="btn bg-indigo-500 border-none">
             Login
           </Link>
         )}

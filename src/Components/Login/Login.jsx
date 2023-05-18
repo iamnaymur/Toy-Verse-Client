@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Authprovider/AuthProvider";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const { signIn, googleSignIn } = useContext(AuthContext);
@@ -63,12 +64,12 @@ const Login = () => {
               <button
                 type="button"
                 onClick={handleGoogleSignIn}
-                className="btn y mt-5"
+                className="btn mt-5"
               >
-                Sign In With Google
+                <FaGoogle className="me-2" /> Sign In With Google
               </button>
               <label className="label-text-alt mt-2 font-semibold">
-                You are new to Volunteer Network?
+                You are new to ToyVerse?
                 <Link
                   to="/signup"
                   href="#"
