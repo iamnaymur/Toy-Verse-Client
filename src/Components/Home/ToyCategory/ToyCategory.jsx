@@ -3,6 +3,7 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 const ToyCategory = () => {
+  const [tabIndex, setTabIndex] = useState(0);
   const [categoryToy, setCategoryToy] = useState([]);
   // console.log(categoryToy);
   useEffect(() => {
@@ -11,16 +12,16 @@ const ToyCategory = () => {
       .then((data) => setCategoryToy(data));
   }, []);
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto ">
       <h1 className="text-3xl mb-5">
         Select your desired toys from this category below.
       </h1>
-      <div className="w-2/4 mx-auto mt-10 bg-blue-100">
+      <div className="w-2/4 mx-auto mt-10 bg-blue-100 p-5">
         <Tabs forceRenderTabPanel defaultIndex={1}>
-          <TabList>
-            <Tab>The Marvel</Tab>
-            <Tab>Star Wars</Tab>
-            <Tab>DC Comis</Tab>
+          <TabList >
+            <Tab>First Tab</Tab>
+            <Tab>Second Tab</Tab>
+            <Tab>Third Tab</Tab>
           </TabList>
           <TabPanel>
             <Tabs forceRenderTabPanel>
@@ -31,14 +32,14 @@ const ToyCategory = () => {
               <TabPanel>
                 <p>Husband of Marge; father of Bart, Lisa, and Maggie.</p>
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Homer_Simpson_2006.png/212px-Homer_Simpson_2006.png"
+                  src=""
                   alt="Homer Simpson"
                 />
               </TabPanel>
               <TabPanel>
                 <p>Wife of Homer; mother of Bart, Lisa, and Maggie.</p>
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Marge_Simpson.png/220px-Marge_Simpson.png"
+                  src=""
                   alt="Marge Simpson"
                 />
               </TabPanel>
@@ -58,7 +59,7 @@ const ToyCategory = () => {
                   Planet Express Ship's cook.
                 </p>
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Bender_Rodriguez.png/220px-Bender_Rodriguez.png"
+                  src=""
                   alt="Bender Bending Rodriguez"
                 />
               </TabPanel>
@@ -70,7 +71,7 @@ const ToyCategory = () => {
                   University.
                 </p>
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/FuturamaProfessorFarnsworth.png/175px-FuturamaProfessorFarnsworth.png"
+                  src=""
                   alt="Professor Hubert J. Farnsworth"
                 />
               </TabPanel>
@@ -89,7 +90,7 @@ const ToyCategory = () => {
                   interest of Fry.
                 </p>
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Turanga_Leela.png/150px-Turanga_Leela.png"
+                  src=""
                   alt="Turanga Leela"
                 />
               </TabPanel>
@@ -100,7 +101,7 @@ const ToyCategory = () => {
                   Planet Express Ship's cook.
                 </p>
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Bender_Rodriguez.png/220px-Bender_Rodriguez.png"
+                  src=""
                   alt="Bender Bending Rodriguez"
                 />
               </TabPanel>

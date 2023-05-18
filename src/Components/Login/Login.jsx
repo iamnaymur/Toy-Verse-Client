@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Authprovider/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { signIn, googleSignIn } = useContext(AuthContext);
@@ -16,10 +17,12 @@ const Login = () => {
     signIn(email, password)
       .then((userCredentials) => {
         const user = userCredentials.user;
+        toast.success('User log in successfully')
         console.log(user);
+        form.reset()
       })
       .catch((error) => {
-        console.log(error.message);
+        toast.error(error.message);
       });
   };
 
@@ -27,10 +30,12 @@ const Login = () => {
     googleSignIn()
       .then((userCredentials) => {
         const user = userCredentials.user;
+        toast.success('User signed in successfully')
         console.log(user);
+        form.reset()
       })
       .catch((error) => {
-        console.log(error.message);
+        toast.error(error.message);
       });
   };
   return (

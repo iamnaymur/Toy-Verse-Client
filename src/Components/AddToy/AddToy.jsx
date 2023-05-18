@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../Authprovider/AuthProvider";
+import { toast } from "react-toastify";
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
@@ -35,7 +36,12 @@ const AddToy = () => {
       body: JSON.stringify(addedToy),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        console.log(data)
+        if (data.acknowledged === true) {
+          toast.success('Added Successfully')
+        }
+      });
   };
   return (
     <div className="mt-10 text-xl text-center space-y-10">
@@ -179,7 +185,9 @@ const AddToy = () => {
               </div>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Add This</button>
+              <button className="btn bg-indigo-500 border-none ">
+                Add This
+              </button>
             </div>
           </form>
         </div>

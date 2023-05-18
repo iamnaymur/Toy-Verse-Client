@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Authprovider/AuthProvider";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const MyToys = () => {
   const [addedToys, setAddedToys] = useState([]);
@@ -23,6 +24,7 @@ const MyToys = () => {
         if (data.deletedCount > 0) {
           const newToys = addedToys.filter((toy) => toy._id !== id);
           setAddedToys(newToys);
+          toast.success('Deleted successfully')
         }
       });
   };

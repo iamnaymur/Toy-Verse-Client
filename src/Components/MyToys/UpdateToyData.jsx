@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const UpdateToyData = () => {
   const toyData = useLoaderData();
@@ -7,7 +8,7 @@ const UpdateToyData = () => {
 
   const handleToyUpdateInfo = (e) => {
     e.preventDefault();
-    const form = event.target;
+    const form = e.target;
     const price = form.price.value;
     const quantity = form.quantity.value;
     const description = form.description.value;
@@ -15,13 +16,17 @@ const UpdateToyData = () => {
     console.log(updatedToyInfo);
 
     fetch(`http://localhost:5000/addToys/${toyData._id}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(updatedToyInfo)
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updatedToyInfo),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if (data.modifiedCount > 0) { 
+          toast.success('Updated this toy data successfully')
+          form.reset()
+        }
       });
   };
 
@@ -32,7 +37,7 @@ const UpdateToyData = () => {
         className="card-body mx-auto  w-2/4 mb-20 space-y-5"
       >
         <h1 className="text-center text-3xl font-semibold mt-10">
-          Update the selected toy here.
+          Update the toy named {toyData.name}
         </h1>
         <div className="form-control">
           <label className="label">

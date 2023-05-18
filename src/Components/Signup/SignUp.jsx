@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../Authprovider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   const { signUp } = useContext(AuthContext);
@@ -19,10 +20,12 @@ const SignUp = () => {
         const user = userCredentials.user;
         updateData(user, name, photo);
         console.log(user);
+        toast.success('User account created successfully')
+        form.reset()
       })
 
       .catch((error) => {
-        console.log(error.message);
+        toast.error(error.message);
       });
 
     const updateData = (user, name, photo) => {
@@ -65,6 +68,7 @@ const SignUp = () => {
                   <span className="label-text">Name</span>
                 </label>
                 <input
+                  required
                   name="name"
                   type="text"
                   placeholder="name"
@@ -76,6 +80,7 @@ const SignUp = () => {
                   <span className="label-text">Email</span>
                 </label>
                 <input
+                  required
                   name="email"
                   type="email"
                   placeholder="example@gmail.com"
@@ -87,10 +92,12 @@ const SignUp = () => {
                   <span className="label-text">Photo Url</span>
                 </label>
                 <input
+                  required
                   name="photo"
                   type="text"
                   placeholder="Photo url"
                   className="input input-bordered"
+                  
                 />
               </div>
               <div className="form-control">
