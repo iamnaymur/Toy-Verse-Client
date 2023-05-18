@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Routes, createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
 import Login from "../../Login/Login";
 import SignUp from "../../Signup/SignUp";
@@ -9,6 +9,8 @@ import MyToys from "../../MyToys/MyToys";
 import PrivateROute from "../../PrivateRoute/PrivateROute";
 import UpdateToyData from "../../MyToys/UpdateToyData";
 import AllToys from "../../AllToys/AllToys";
+import ViewDetails from "../../AllToys/ViewDetails";
+import ErrorPage from "../../ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -53,10 +55,20 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/addToys/${params.id}`),
       },
-      
+
       {
         path: "/alltoys",
         element: <AllToys></AllToys>,
+      },
+      {
+        path: "/viewDetails/:id",
+        element: (
+          <PrivateROute>
+            <ViewDetails></ViewDetails>
+          </PrivateROute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/addToys/${params.id}`),
       },
     ],
   },
