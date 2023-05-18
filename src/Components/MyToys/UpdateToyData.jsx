@@ -1,54 +1,81 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useLoaderData } from "react-router-dom";
 
 const UpdateToyData = () => {
   const toyData = useLoaderData();
-  console.log(toyData);
+  // console.log(toyData);
+
+  const handleToyUpdateInfo = (e) => {
+    e.preventDefault();
+    const form = event.target;
+    const price = form.price.value;
+    const quantity = form.quantity.value;
+    const description = form.description.value;
+    const updatedToyInfo = { price, quantity, description };
+    console.log(updatedToyInfo);
+
+    fetch(`http://localhost:5000/addToys/${toyData._id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updatedToyInfo)
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
+
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <div className="card-body">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Price</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="email"
-                  className="input input-bordered"
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Quantity</span>
-                </label>
-                <input
-                  name="Quantity"
-                  type="text"
-                  placeholder="email"
-                  className="input input-bordered"
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Description</span>
-                </label>
-                <input
-                  type="text"
-                  name="description"
-                  placeholder="password"
-                  className="input input-bordered"
-                />
-              </div>
-              <div className="form-control mt-6">
-                <button className="btn btn-primary">Update</button>
-              </div>
-            </div>
-          </div>
+      <form
+        onSubmit={handleToyUpdateInfo}
+        className="card-body mx-auto  w-2/4 mb-20 space-y-5"
+      >
+        <h1 className="text-center text-3xl font-semibold mt-10">
+          Update the selected toy here.
+        </h1>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text bold">Price</span>
+          </label>
+          <input
+            name="price"
+            type="text"
+            placeholder="Price of the selected toy"
+            className="input input-bordered h-16"
+          />
         </div>
-      </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text bold">Quantity</span>
+          </label>
+          <input
+            name="quantity"
+            type="text"
+            placeholder="Quantity of the selected toy"
+            className="input input-bordered  h-16"
+          />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text bold">Description</span>
+          </label>
+          <input
+            type="text"
+            name="description"
+            placeholder="Short Description"
+            className="input input-bordered  h-16"
+          />
+        </div>
+        <div className="form-control mt-6">
+          <button
+            style={{ backgroundColor: "#FF7F50" }}
+            className="btn border-0"
+          >
+            Update
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

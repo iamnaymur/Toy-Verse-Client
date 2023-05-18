@@ -21,20 +21,11 @@ const MyToys = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount > 0) {
-          const newToys = addedToys.filter((event) => event._id !== id);
+          const newToys = addedToys.filter((toy) => toy._id !== id);
           setAddedToys(newToys);
         }
       });
   };
-
-  // modal here
-
-  // const handleUpdate = (event) => {
-  //   event.preventDefault();
-  //   const form = event.target;
-  //   const name = form.name.value;
-  //   console.log(name);
-  // };
 
   return (
     <div>
@@ -64,9 +55,12 @@ const MyToys = () => {
                   Delete
                 </button>
                 <>
-                  <Link to={`/updateToyData/${toyInfo._id}`} className="btn">
-                    Edit
-                  </Link>
+                  <button>
+                    <Link to={`/updateToyData/${toyInfo._id}`} className="btn">
+                      Edit
+                    </Link>
+                    {/* The button to open modal */}
+                  </button>
                 </>
               </td>
             </tr>

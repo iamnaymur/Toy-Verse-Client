@@ -4,7 +4,7 @@ import "react-tabs/style/react-tabs.css";
 
 const ToyCategory = () => {
   const [categoryToy, setCategoryToy] = useState([]);
-  console.log(categoryToy);
+  // console.log(categoryToy);
   useEffect(() => {
     fetch("http://localhost:5000/toyCategories")
       .then((res) => res.json())

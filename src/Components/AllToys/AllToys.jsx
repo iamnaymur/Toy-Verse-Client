@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllToys = () => {
   const [allToyData, setAllToyData] = useState([]);
@@ -12,9 +13,9 @@ const AllToys = () => {
     <div className="container mx-auto mt-20">
       <h1 className="text-center mb-10 font-semibold">
         Here are all the toys you can see added by our users. For safety reasons
-        we can not share much information about any user. <br /> From this page you can
-        just get an good idea about the product reviews and some details so that
-        you can think of joining us soon.
+        we can not share much information about any user. <br /> From this page
+        you can just get an good idea about the product reviews and some details
+        so that you can think of joining us soon.
       </h1>
       <div className="overflow-x-auto ">
         <table className="table  w-full ">
@@ -31,19 +32,19 @@ const AllToys = () => {
           </thead>
           <tbody>
             {allToyData.map((data, index) => (
-              <>
-                <tr>
-                  <th>{index + 1}</th>
-                  <td>{data.seller}</td>
-                  <td>{data.name}</td>
-                  <td>{data.category}</td>
-                  <td>{data.price}</td>
-                  <td>{data.quantity}</td>
-                  <td>
+              <tr key={data._id}>
+                <td>{index + 1}</td>
+                <td>{data.seller}</td>
+                <td>{data.name}</td>
+                <td>{data.category}</td>
+                <td>{data.price}</td>
+                <td>{data.quantity}</td>
+                <td>
+                  <Link>
                     <button className="btn-xs btn">View Details</button>
-                  </td>
-                </tr>
-              </>
+                  </Link>
+                </td>
+              </tr>
             ))}
           </tbody>
         </table>
