@@ -19,16 +19,17 @@ const ToyCategory = () => {
 
   return (
     <div className="md:container mx-auto mt-20 ">
-      <h1 className="text-3xl mb-5">
-        Select your desired toys from this category below.
+      <h1 className=" text-center bold text-4xl mb-5">
+        Some categories of action figure toys. <br />
+        <span className="text-xl">Check it out!</span>
       </h1>
-      <div className="w-3/4 mx-auto mt-10 bg-indigo-300 p-5">
+      <div className="w-3/4 rounded-lg mx-auto mt-10 bg-orange-300 p-5">
         <Tabs forceRenderTabPanel defaultIndex={1}>
           <TabPanel>
             <div>
               <Tabs forceRenderTabPanel>
                 <div className="text-center ">
-                  <TabList>
+                  <TabList className="text-xl bold flex justify-evenly">
                     <Tab>Marvel</Tab>
                     <Tab>Dc</Tab>
                     <Tab>Transformers</Tab>
