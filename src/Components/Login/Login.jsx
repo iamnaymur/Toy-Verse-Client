@@ -12,14 +12,14 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    // console.log(email, password);
 
     signIn(email, password)
       .then((userCredentials) => {
         const user = userCredentials.user;
-        toast.success('User log in successfully')
+        toast.success("User log in successfully");
         console.log(user);
-        form.reset()
+        form.reset();
       })
       .catch((error) => {
         toast.error(error.message);
@@ -30,9 +30,8 @@ const Login = () => {
     googleSignIn()
       .then((userCredentials) => {
         const user = userCredentials.user;
-        toast.success('User signed in successfully')
+        toast.success("User signed in successfully");
         console.log(user);
-        form.reset()
       })
       .catch((error) => {
         toast.error(error.message);

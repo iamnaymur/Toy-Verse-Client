@@ -11,6 +11,7 @@ import UpdateToyData from "../../MyToys/UpdateToyData";
 import AllToys from "../../AllToys/AllToys";
 import ViewDetails from "../../AllToys/ViewDetails";
 import ErrorPage from "../../ErrorPage/ErrorPage";
+import CategoryDetails from "../../Home/ToyCategory/CategoryDetails";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,16 @@ const router = createBrowserRouter([
         element: (
           <PrivateROute>
             <ViewDetails></ViewDetails>
+          </PrivateROute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/addToys/${params.id}`),
+      },
+      {
+        path: "viewCategoryDetails/:id",
+        element: (
+          <PrivateROute>
+            <CategoryDetails></CategoryDetails>
           </PrivateROute>
         ),
         loader: ({ params }) =>

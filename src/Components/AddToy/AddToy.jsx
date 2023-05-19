@@ -40,6 +40,7 @@ const AddToy = () => {
         console.log(data)
         if (data.acknowledged === true) {
           toast.success('Added Successfully')
+          form.reset()
         }
       });
   };

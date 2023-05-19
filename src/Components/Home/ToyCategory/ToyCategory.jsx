@@ -1,111 +1,143 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 const ToyCategory = () => {
-  const [tabIndex, setTabIndex] = useState(0);
-  const [categoryToy, setCategoryToy] = useState([]);
-  // console.log(categoryToy);
+  const [categoryToys, setCategoryToys] = useState([]);
+  // console.log(categoryToys);
   useEffect(() => {
-    fetch("http://localhost:5000/toyCategories")
+    fetch(`http://localhost:5000/addedToys`)
       .then((res) => res.json())
-      .then((data) => setCategoryToy(data));
+      .then((data) => setCategoryToys(data));
   }, []);
+
+  const marvelToys = categoryToys.filter((toys) => toys.category === "marvel");
+  const dcToys = categoryToys.filter((toys) => toys.category === "Dc");
+  const transformersToys = categoryToys.filter((toys) => toys.category === "transformers");
+  // console.log(marvelToys);
+
   return (
     <div className="container mx-auto ">
       <h1 className="text-3xl mb-5">
         Select your desired toys from this category below.
       </h1>
-      <div className="w-2/4 mx-auto mt-10 bg-blue-100 p-5">
+      <div className="w-3/4 mx-auto mt-10 bg-indigo-300 p-5">
         <Tabs forceRenderTabPanel defaultIndex={1}>
-          <TabList >
-            <Tab>First Tab</Tab>
-            <Tab>Second Tab</Tab>
-            <Tab>Third Tab</Tab>
-          </TabList>
           <TabPanel>
-            <Tabs forceRenderTabPanel>
-              <TabList>
-                <Tab>Iron Man</Tab>
-                <Tab>Spider Man</Tab>
-              </TabList>
-              <TabPanel>
-                <p>Husband of Marge; father of Bart, Lisa, and Maggie.</p>
-                <img
-                  src=""
-                  alt="Homer Simpson"
-                />
-              </TabPanel>
-              <TabPanel>
-                <p>Wife of Homer; mother of Bart, Lisa, and Maggie.</p>
-                <img
-                  src=""
-                  alt="Marge Simpson"
-                />
-              </TabPanel>
-            </Tabs>
-          </TabPanel>
-          <TabPanel>
-            <Tabs forceRenderTabPanel>
-              <TabList>
-                <Tab>Philip J. Fry</Tab>
-                <Tab>Turanga Leela</Tab>
-              </TabList>
+            <div>
+              <Tabs forceRenderTabPanel>
+                <div className="text-center ">
+                  <TabList>
+                    <Tab>Marvel</Tab>
+                    <Tab>Dc</Tab>
+                    <Tab>Transformers</Tab>
+                  </TabList>
+                </div>
+                <TabPanel>
+                  <div className="grid gap-5 grid-cols-2 p-5">
+                    {marvelToys.slice(0, 4).map((toy) => (
+                      <div key={toy._id}>
+                        <div className="rounded-lg bg-base-100 shadow-xl">
+                          <figure className="px-10 pt-10">
+                            <img
+                              src={toy.photo}
+                              alt="Shoes"
+                              className="rounded-xl w-auto h-52"
+                            />
+                          </figure>
+                          <div className="card-body items-start text-center">
+                            <h2 className="card-title">Name: {toy.name}</h2>
+                            <p>
+                              <span className="bold">Price: </span>
+                              {toy.price}
+                            </p>
+                            <p>
+                              <span className="bold">Ratings: </span>
+                              {toy.rating}
+                            </p>
 
-              <TabPanel>
-                <p>
-                  A kleptomaniacal, lazy, cigar-smoking, heavy-drinking robot
-                  who is Fry's best friend. Built in Tijuana, Mexico, he is the
-                  Planet Express Ship's cook.
-                </p>
-                <img
-                  src=""
-                  alt="Bender Bending Rodriguez"
-                />
-              </TabPanel>
+                            <Link to={`/viewCategoryDetails/${toy._id}`}>
+                              <button className="btn btn-sm border-none bg-indigo-500">
+                                View Details
+                              </button>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </TabPanel>
+                <TabPanel>
+                  <div className="grid gap-5 grid-cols-2 p-5">
+                    {dcToys.slice(0, 4).map((toy) => (
+                      <div key={toy._id}>
+                        <div className="rounded-lg bg-base-100 shadow-xl">
+                          <figure className="px-10 pt-10">
+                            <img
+                              src={toy.photo}
+                              alt="Shoes"
+                              className="rounded-xl w-auto h-52"
+                            />
+                          </figure>
+                          <div className="card-body items-start text-center">
+                            <h2 className="card-title">Name: {toy.name}</h2>
+                            <p>
+                              <span className="bold">Price: </span>
+                              {toy.price}
+                            </p>
+                            <p>
+                              <span className="bold">Ratings: </span>
+                              {toy.rating}
+                            </p>
 
-              <TabPanel>
-                <p>
-                  Many times great-nephew of Fry. CEO and owner of Planet
-                  Express delivery company. Tenured professor of Mars
-                  University.
-                </p>
-                <img
-                  src=""
-                  alt="Professor Hubert J. Farnsworth"
-                />
-              </TabPanel>
-            </Tabs>
-          </TabPanel>
-          <TabPanel>
-            <Tabs forceRenderTabPanel>
-              <TabList>
-                <Tab>Philip J. Fry</Tab>
-                <Tab>Turanga Leela</Tab>
-              </TabList>
+                            <Link to={`/viewCategoryDetails/${toy._id}`}>
+                              <button className="btn btn-sm border-none bg-indigo-500">
+                                View Details
+                              </button>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </TabPanel>
+                <TabPanel>
+                  <div className="grid gap-5 grid-cols-2 p-5">
+                    {transformersToys.slice(0, 4).map((toy) => (
+                      <div key={toy._id}>
+                        <div className="rounded-lg bg-base-100 shadow-xl">
+                          <figure className="px-10 pt-10">
+                            <img
+                              src={toy.photo}
+                              alt="Shoes"
+                              className="rounded-xl w-auto h-52"
+                            />
+                          </figure>
+                          <div className="card-body items-start text-center">
+                            <h2 className="card-title">Name: {toy.name}</h2>
+                            <p>
+                              <span className="bold">Price: </span>
+                              {toy.price}
+                            </p>
+                            <p>
+                              <span className="bold">Ratings: </span>
+                              {toy.rating}
+                            </p>
 
-              <TabPanel>
-                <p>
-                  Mutant cyclops. Captain of the Planet Express Ship. Love
-                  interest of Fry.
-                </p>
-                <img
-                  src=""
-                  alt="Turanga Leela"
-                />
-              </TabPanel>
-              <TabPanel>
-                <p>
-                  A kleptomaniacal, lazy, cigar-smoking, heavy-drinking robot
-                  who is Fry's best friend. Built in Tijuana, Mexico, he is the
-                  Planet Express Ship's cook.
-                </p>
-                <img
-                  src=""
-                  alt="Bender Bending Rodriguez"
-                />
-              </TabPanel>
-            </Tabs>
+                            <Link to={`/viewCategoryDetails/${toy._id}`}>
+                              <button className="btn btn-sm border-none bg-indigo-500">
+                                View Details
+                              </button>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </TabPanel>
+              </Tabs>
+            </div>
           </TabPanel>
         </Tabs>
       </div>
