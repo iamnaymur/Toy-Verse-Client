@@ -11,9 +11,9 @@ const Navbar = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="navbar text-white  bg-orange-400">
+    <div className="navbar ">
       <div className="navbar-start">
-        <div className="dropdown" style={{ backgroundColor: "#FF7F50" }}>
+        <div className="dropdown" >
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -32,8 +32,8 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box bold w-52"
-            style={{ backgroundColor: "#FF7F50" }}
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box bold w-52 bg-yellow-400"
+
           >
             {user && (
               <>
@@ -92,20 +92,12 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link
-          to="/"
-          className="font-semibold normal-case text-3xl flex items-center"
-        >
+        <Link to="/">
           <img
-            className="w-14"
-            src="https://i.ibb.co/6Jpb5kG/Screenshot-129-removebg-preview.png"
+            className="w-36"
+            src="https://i.ibb.co/YPK2VJD/Screenshot-2023-05-19-224137-removebg-preview.png"
             alt=""
           />
-          <h1>
-            <span className="text-indigo-500  bold">
-              Toy<span className="text-white">Verse</span>
-            </span>
-          </h1>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex ">

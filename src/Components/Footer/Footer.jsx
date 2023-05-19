@@ -9,8 +9,8 @@ const Footer = () => {
           <div>
             <div>
               <img
-                className="w-12"
-                src="https://i.ibb.co/6Jpb5kG/Screenshot-129-removebg-preview.png"
+                className="w-28 mb-5"
+                src="https://i.ibb.co/YPK2VJD/Screenshot-2023-05-19-224137-removebg-preview.png"
                 alt=""
               />
               <p className="font-bold text-lg">ToyVerse Ltd.</p>
@@ -24,13 +24,13 @@ const Footer = () => {
           <div>
             <h2 className="font-bold">Connect with us</h2>
             <div className="flex gap-4 mt-2">
-              <Link href="#" className="text-xl">
+              <Link href="#" className="text-2xl">
                 <FaGoogle />
               </Link>
-              <Link href="#" className="text-xl">
+              <Link href="#" className="text-2xl">
                 <FaTwitter />
               </Link>
-              <Link href="#" className="text-xl">
+              <Link href="#" className="text-2xl">
                 <FaFacebook />
               </Link>
             </div>
@@ -43,10 +43,10 @@ const Footer = () => {
               For any inquiries or assistance, please feel free to reach out to
               us. We're here to help!
             </p>
-            <ul className="mt-2">
+            <ul className="mt-2 bold">
               <li>Email: toysVerse@gmail.com</li>
               <li>Phone: +1 123-456-7890</li>
-              <li>Address: 123 Toy Street, California, Country</li>
+              <li>Address: Siddhirganj,Narayanganj.</li>
             </ul>
           </div>
         </div>

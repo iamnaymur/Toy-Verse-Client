@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import ViewDetails from "../../AllToys/ViewDetails";
 import { AuthContext } from "../../Authprovider/AuthProvider";
-import { toast } from "react-toastify";
 
 const CategoryDetails = () => {
     const toyDetails = useLoaderData();

@@ -8,14 +8,14 @@ const HowToBuy = () => {
         <div>
           <div className="flex justify-center">
             <img
-              src="https://i.ibb.co/HYHMvLZ/iron-man-5783522-640.webp"
+              src="https://i.ibb.co/D4r112c/15-157975-cartoon-iron-man-png-iron-man-chibi-png.png"
               alt="Iron Man Toy"
-              className="w-72  "
+              className="w-80"
             />
           </div>
           <div className="text-center">
             <h3 className="text-2xl font-bold">Choose a Toy</h3>
-            <p className="font-semibold">
+            <p className="font-semibold text-gray-500">
               Explore short descriptions and toy pictures to get an idea. You
               can also visit our available stores.
             </p>
@@ -26,14 +26,14 @@ const HowToBuy = () => {
             <img
               src="https://i.ibb.co/JkQdKN4/360-F-332799148-55-PKYZ6-Ok-LWfu-QTTZ0je-D8gz-Nnwe-Z0m-U.jpg"
               alt="Delivery Man"
-              className="h-96"
+              className="h-96 "
             />
           </div>
           <div className="text-center">
             <h3 className="text-2xl font-bold">
               Fill up the delivery location form
             </h3>
-            <p className="font-semibold">
+            <p className="font-semibold text-gray-500">
               We have our own delivery system and it is totally managed by our
               own company. Our delivery man will arrive at your selected
               location on time and deliver the product to you safe.
@@ -50,7 +50,7 @@ const HowToBuy = () => {
           </div>
           <div className="text-center">
             <h3 className="text-2xl font-bold">Swap and repeat</h3>
-            <p className="font-semibold">
+            <p className="font-semibold text-gray-500">
               Return any unloved toy and swap it for something else. We would
               love to do that for you!
             </p>

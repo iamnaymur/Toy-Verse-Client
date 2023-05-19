@@ -35,7 +35,7 @@ const AllToys = () => {
         <h1 className="text-center mb-10 font-semibold">
           Here are all the toys you can see added by our users. For safety
           reasons we can not share much information about any user. <br /> From
-          this page you can just get an good idea about the product reviews and
+          this page you can just get a good idea about the product reviews and
           some details so that you can think of joining us soon.
         </h1>
         <div className="overflow-x-auto ">
