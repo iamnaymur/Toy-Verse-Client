@@ -7,7 +7,14 @@ const Footer = () => {
       <div className="max-w-4xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div>
-            <p className="font-bold text-lg">ToyVerse Ltd.</p>
+            <div>
+              <img
+                className="w-12"
+                src="https://i.ibb.co/6Jpb5kG/Screenshot-129-removebg-preview.png"
+                alt=""
+              />
+              <p className="font-bold text-lg">ToyVerse Ltd.</p>
+            </div>
             <p className="mt-2">
               We are here to provide you toys at an affordable price.
             </p>

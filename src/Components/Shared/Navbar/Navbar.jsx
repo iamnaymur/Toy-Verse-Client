@@ -171,7 +171,7 @@ const Navbar = () => {
       <div className="navbar-end">
         {user && (
           <div
-            className="tooltip  tooltip-left"
+            className="tooltip  tooltip-left cursor-pointer"
             data-tip={user?.displayName || "no name found"}
           >
             <div className="avatar">
