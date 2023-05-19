@@ -11,7 +11,7 @@ const Navbar = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="navbar text-white" style={{ backgroundColor: "#FF7F50" }}>
+    <div className="navbar text-white  bg-orange-400">
       <div className="navbar-start">
         <div className="dropdown" style={{ backgroundColor: "#FF7F50" }}>
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -92,8 +92,20 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/" className="font-semibold normal-case text-3xl">
-          ToyVerse
+        <Link
+          to="/"
+          className="font-semibold normal-case text-3xl flex items-center"
+        >
+          <img
+            className="w-14"
+            src="https://i.ibb.co/6Jpb5kG/Screenshot-129-removebg-preview.png"
+            alt=""
+          />
+          <h1>
+            <span className="text-indigo-500  bold">
+              Toy<span className="text-white">Verse</span>
+            </span>
+          </h1>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex ">

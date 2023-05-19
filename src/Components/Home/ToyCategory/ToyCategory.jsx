@@ -18,7 +18,7 @@ const ToyCategory = () => {
   // console.log(marvelToys);
 
   return (
-    <div className="container mx-auto ">
+    <div className="md:container mx-auto mt-20 ">
       <h1 className="text-3xl mb-5">
         Select your desired toys from this category below.
       </h1>
@@ -35,7 +35,7 @@ const ToyCategory = () => {
                   </TabList>
                 </div>
                 <TabPanel>
-                  <div className="grid gap-5 grid-cols-2 p-5">
+                  <div className="md:grid gap-5 grid-cols-2  p-5">
                     {marvelToys.slice(0, 4).map((toy) => (
                       <div key={toy._id}>
                         <div className="rounded-lg bg-base-100 shadow-xl">
@@ -43,7 +43,7 @@ const ToyCategory = () => {
                             <img
                               src={toy.photo}
                               alt="Shoes"
-                              className="rounded-xl w-auto h-52"
+                              className="rounded-xl w-auto h-52 "
                             />
                           </figure>
                           <div className="card-body items-start text-center">
@@ -69,7 +69,7 @@ const ToyCategory = () => {
                   </div>
                 </TabPanel>
                 <TabPanel>
-                  <div className="grid gap-5 grid-cols-2 p-5">
+                  <div className="md:grid gap-5 grid-cols-2 p-5">
                     {dcToys.slice(0, 4).map((toy) => (
                       <div key={toy._id}>
                         <div className="rounded-lg bg-base-100 shadow-xl">
@@ -103,7 +103,7 @@ const ToyCategory = () => {
                   </div>
                 </TabPanel>
                 <TabPanel>
-                  <div className="grid gap-5 grid-cols-2 p-5">
+                  <div className="md:grid gap-5 grid-cols-2 p-5">
                     {transformersToys.slice(0, 4).map((toy) => (
                       <div key={toy._id}>
                         <div className="rounded-lg bg-base-100 shadow-xl">
