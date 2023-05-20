@@ -1,9 +1,6 @@
 import React, { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FaLocationArrow } from "react-icons/fa";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
 
@@ -15,7 +12,7 @@ import { Scrollbar } from "swiper";
 const TopCustomer = () => {
   return (
     <div className="container mx-auto mt-20">
-      <div className="text-center">
+      <div data-aos="fade-left" className="text-center">
         <h1 className="text-5xl bold">Some of our top customer's reviews!</h1>
         <small>Swipe left to see more.</small>
       </div>

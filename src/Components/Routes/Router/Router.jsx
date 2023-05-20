@@ -17,6 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+
     children: [
       {
         path: "/",
@@ -82,7 +83,12 @@ const router = createBrowserRouter([
           fetch(`http://localhost:5000/addToys/${params.id}`),
       },
     ],
+    
   },
+  {
+    path: '*',
+    element:<ErrorPage></ErrorPage>
+  }
 ]);
 
 export default router;
