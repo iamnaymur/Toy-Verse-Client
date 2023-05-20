@@ -55,7 +55,9 @@ const router = createBrowserRouter([
         path: "/updateToyData/:id",
         element: <UpdateToyData></UpdateToyData>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/addToys/${params.id}`),
+          fetch(
+            `https://toy-verse-server-azure.vercel.app/addToys/${params.id}`
+          ),
       },
 
       {
@@ -70,7 +72,9 @@ const router = createBrowserRouter([
           </PrivateROute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/addToys/${params.id}`),
+          fetch(
+            `https://toy-verse-server-azure.vercel.app/addToys/${params.id}`
+          ),
       },
       {
         path: "/viewCategoryDetails/:id",
@@ -80,15 +84,16 @@ const router = createBrowserRouter([
           </PrivateROute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/addToys/${params.id}`),
+          fetch(
+            `https://toy-verse-server-azure.vercel.app/addToys/${params.id}`
+          ),
       },
     ],
-    
   },
   {
-    path: '*',
-    element:<ErrorPage></ErrorPage>
-  }
+    path: "*",
+    element: <ErrorPage></ErrorPage>,
+  },
 ]);
 
 export default router;

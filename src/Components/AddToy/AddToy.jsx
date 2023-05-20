@@ -31,17 +31,17 @@ const AddToy = () => {
     };
     // console.log(addedToy);
 
-    fetch("http://localhost:5000/addedToys", {
+    fetch("https://toy-verse-server-azure.vercel.app/addedToys", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(addedToy),
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         if (data.acknowledged === true) {
-          toast.success('Added Successfully')
-          form.reset()
+          toast.success("Added Successfully");
+          form.reset();
         }
       });
   };

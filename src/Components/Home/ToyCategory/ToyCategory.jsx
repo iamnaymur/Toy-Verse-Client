@@ -7,14 +7,16 @@ const ToyCategory = () => {
   const [categoryToys, setCategoryToys] = useState([]);
   // console.log(categoryToys);
   useEffect(() => {
-    fetch(`http://localhost:5000/addedToys`)
+    fetch(`https://toy-verse-server-azure.vercel.app/addedToys`)
       .then((res) => res.json())
       .then((data) => setCategoryToys(data));
   }, []);
 
   const marvelToys = categoryToys.filter((toys) => toys.category === "marvel");
   const dcToys = categoryToys.filter((toys) => toys.category === "Dc");
-  const transformersToys = categoryToys.filter((toys) => toys.category === "transformers");
+  const transformersToys = categoryToys.filter(
+    (toys) => toys.category === "transformers"
+  );
   // console.log(marvelToys);
 
   return (

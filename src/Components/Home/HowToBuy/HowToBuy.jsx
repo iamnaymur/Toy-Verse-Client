@@ -9,9 +9,9 @@ const HowToBuy = () => {
         <div data-aos="fade-right">
           <div className="flex justify-center">
             <img
-              src="https://i.ibb.co/D4r112c/15-157975-cartoon-iron-man-png-iron-man-chibi-png.png"
+              src="https://i.ibb.co/W3wQWzW/15-157975-cartoon-iron-man-png-iron-man-chibi-png-removebg-preview-2.png"
               alt="Iron Man Toy"
-              className="w-80"
+              className="w-96 h-96"
             />
           </div>
           <div className="text-center">
@@ -22,12 +22,12 @@ const HowToBuy = () => {
             </p>
           </div>
         </div>
-        <div data-aos="fade-up">
+        <div>
           <div className="flex justify-center">
             <img
               src="https://i.ibb.co/JkQdKN4/360-F-332799148-55-PKYZ6-Ok-LWfu-QTTZ0je-D8gz-Nnwe-Z0m-U.jpg"
               alt="Delivery Man"
-              className="h-96 "
+              className="w-96 h-96"
             />
           </div>
           <div className="text-center">
@@ -46,7 +46,7 @@ const HowToBuy = () => {
             <img
               src="https://i.ibb.co/c1V80cy/delivery-box-open-cartoon-vector-19323833-removebg-preview.png"
               alt="Product return box"
-              className="h-96  "
+              className="w-96 h-96"
             />
           </div>
           <div className="text-center">

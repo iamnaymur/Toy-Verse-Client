@@ -22,7 +22,7 @@ const CategoryDetails = () => {
   return (
     <div>
       <DynamicPageTitle title="Category Toy Details" />
-      <div style={{ backgroundImage: "" }} className="mt-10">
+      <div  className="mt-10">
         <h1 className="text-center text-3xl font-semibold">
           Here are some details below about the toy. Please check it out if you
           need!{" "}

@@ -5,7 +5,7 @@ import DynamicPageTitle from "../DynamicPageTitle/DynamicPageTitle";
 
 const UpdateToyData = () => {
   const toyData = useLoaderData();
-  // console.log(toyData);
+  console.log(toyData);
 
   const handleToyUpdateInfo = (e) => {
     e.preventDefault();
@@ -16,7 +16,7 @@ const UpdateToyData = () => {
     const updatedToyInfo = { price, quantity, description };
     console.log(updatedToyInfo);
 
-    fetch(`http://localhost:5000/addToys/${toyData._id}`, {
+    fetch(`https://toy-verse-server-azure.vercel.app/addToys/${toyData._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedToyInfo),
@@ -24,9 +24,9 @@ const UpdateToyData = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.modifiedCount > 0) { 
-          toast.success('Updated this toy data successfully')
-          form.reset()
+        if (data.modifiedCount > 0) {
+          toast.success("Updated this toy data successfully");
+          form.reset();
         }
       });
   };

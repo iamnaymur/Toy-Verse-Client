@@ -2,7 +2,7 @@ import React from "react";
 
 const GallerySection = () => {
   return (
-    <div data-aos="flip-up">
+    <div>
       <h1 className="text-center text-4xl bold m-20">Most selling online!</h1>
       <div className="container mx-auto shadow-2xl shadow-indigo-400 border-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

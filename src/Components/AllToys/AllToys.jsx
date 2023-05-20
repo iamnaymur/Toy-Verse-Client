@@ -12,13 +12,13 @@ const AllToys = () => {
       setRevalid(!revalid);
       return;
     }
-    fetch(`http://localhost:5000/toyName/${event}`)
+    fetch(`https://toy-verse-server-azure.vercel.app/toyName/${event}`)
       .then((res) => res.json())
       .then((data) => setAllToyData(data));
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/addedToys")
+    fetch("https://toy-verse-server-azure.vercel.app/addedToys")
       .then((res) => res.json())
       .then((data) => setAllToyData(data));
   }, [revalid]);
