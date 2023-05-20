@@ -2,16 +2,16 @@ import React from "react";
 
 const GallerySection = () => {
   return (
-    <div>
+    <div data-aos="flip-up">
       <h1 className="text-center text-4xl bold m-20">Most selling online!</h1>
-      <div class="container mx-auto shadow-2xl shadow-indigo-400 border-4">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="bg-gray-100 p-4 ">
+      <div className="container mx-auto shadow-2xl shadow-indigo-400 border-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="bg-gray-100 p-4 ">
             <div className="badge badge-primary">New Shipment!</div>
             <img
               src="https://i.ibb.co/ys1TZ5s/61-GPk-Uebfv-L-AC-SL1000.jpg"
               alt=""
-              class="w-96"
+              className="w-96"
             />
             <div className="text-center ">
               <h1>
@@ -28,11 +28,11 @@ const GallerySection = () => {
               </p>
             </div>
           </div>
-          <div class="bg-gray-100 p-4">
+          <div className="bg-gray-100 p-4">
             <img
               src="https://i.ibb.co/K2SYrq2/61k75yi8qg-L.jpg"
               alt=""
-              class="w-96"
+              className="w-96"
             />
             <div className="text-center">
               <h1>
@@ -49,11 +49,11 @@ const GallerySection = () => {
               </p>
             </div>
           </div>
-          <div class="bg-gray-100 p-4">
+          <div className="bg-gray-100 p-4">
             <img
               src="https://i.ibb.co/b7yNQmr/71frql-Rl-GL.jpg"
               alt=""
-              class="w-96 "
+              className="w-96 "
             />
             <div className="text-center">
               <h1>
@@ -70,12 +70,12 @@ const GallerySection = () => {
               </p>
             </div>
           </div>
-          <div class="bg-gray-100 p-4">
+          <div className="bg-gray-100 p-4">
             <div className="badge badge-primary">New Shipment!</div>
             <img
               src="https://i.ibb.co/xXXpSk1/a8722c40a1eacc93abe8f348c19392ca11b87dd3.jpg"
               alt=""
-              class="w-96 "
+              className="w-96 "
             />
 
             <div className="text-center">
@@ -93,11 +93,11 @@ const GallerySection = () => {
               </p>
             </div>
           </div>
-          <div class="bg-gray-100 p-4">
+          <div className="bg-gray-100 p-4">
             <img
               src="https://i.ibb.co/q7CRKtM/6000203884399.jpg"
               alt=""
-              class="w-96 "
+              className="w-96 "
             />
             <div className="text-center">
               <h1>
@@ -114,11 +114,11 @@ const GallerySection = () => {
               </p>
             </div>
           </div>
-          <div class="bg-gray-100 p-4">
+          <div className="bg-gray-100 p-4">
             <img
               src="https://i.ibb.co/X5RVhdh/b8fce1f0-f538-405b-a2cf-6ff21909d60c-ab607c89da662ee51a0cabfdba611592.webp"
               alt=""
-              class="w-96"
+              className="w-96"
             />
             <div className="text-center">
               <h1>
@@ -135,12 +135,12 @@ const GallerySection = () => {
               </p>
             </div>
           </div>
-          <div class="bg-gray-100 p-4">
+          <div className="bg-gray-100 p-4">
             <div className="badge badge-primary">New Shipment!</div>
             <img
               src="https://i.ibb.co/PDRnn56/download-7.jpg"
               alt=""
-              class="w-96 h-auto"
+              className="w-96 h-auto"
             />
             <div className="text-center">
               <h1>
@@ -157,11 +157,11 @@ const GallerySection = () => {
               </p>
             </div>
           </div>
-          <div class="bg-gray-100 p-4">
+          <div className="bg-gray-100 p-4">
             <img
               src="https://i.ibb.co/QrYyb8x/download-2.jpg"
               alt=""
-              class="w-96 h-auto"
+              className="w-96 h-auto"
             />
             <div className="text-center">
               <h1>

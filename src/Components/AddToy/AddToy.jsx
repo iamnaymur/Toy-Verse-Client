@@ -96,7 +96,6 @@ const AddToy = () => {
               </label>
               <div className="form-control">
                 <input
-                  readOnly
                   defaultValue={user?.displayName}
                   type="text"
                   placeholder="Seller Name"
@@ -110,7 +109,6 @@ const AddToy = () => {
               </label>
               <div className="form-control">
                 <input
-                  readOnly
                   defaultValue={user?.email}
                   name="email"
                   type="email"

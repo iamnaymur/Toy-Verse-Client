@@ -1,13 +1,12 @@
 import React from "react";
-{/* <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />;
- <script src="bower_components/aos/dist/aos.js"></script>;  */}
+
 
 const HowToBuy = () => {
   return (
-    <div  className="mt-20" >
+    <div className="mt-20">
       <h2 className="bold text-center text-5xl">How to Buy?</h2>
       <div className="container mx-auto mt-10 grid gap-4 grid-cols-1 md:grid-cols-3">
-        <div>
+        <div data-aos="fade-right">
           <div className="flex justify-center">
             <img
               src="https://i.ibb.co/D4r112c/15-157975-cartoon-iron-man-png-iron-man-chibi-png.png"
@@ -23,7 +22,7 @@ const HowToBuy = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div data-aos="fade-up">
           <div className="flex justify-center">
             <img
               src="https://i.ibb.co/JkQdKN4/360-F-332799148-55-PKYZ6-Ok-LWfu-QTTZ0je-D8gz-Nnwe-Z0m-U.jpg"
@@ -42,7 +41,7 @@ const HowToBuy = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div data-aos="fade-left">
           <div className="flex justify-center">
             <img
               src="https://i.ibb.co/c1V80cy/delivery-box-open-cartoon-vector-19323833-removebg-preview.png"

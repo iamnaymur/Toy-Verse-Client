@@ -13,10 +13,10 @@ const Subscription = () => {
         <p className="text-6xl font-semibold">Subscribe for offers!</p>
         <p className="text-lg">ToyVerse signup.</p>
 
-        <div class="relative border-b-2 border-black  shadow-sm">
+        <div className="relative border-b-2 border-black  shadow-sm">
           <input
             type="email"
-            class="appearance-none relative block w-full px-3 py-2  bg-transparent"
+            className="appearance-none relative block w-full px-3 py-2  bg-transparent"
             placeholder="example@gmail.com"
           />
         </div>

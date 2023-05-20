@@ -11,11 +11,7 @@ const Banner = () => {
           alt=""
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black">
-          <div
-            data-aos="fade-down"
-            data-aos-duration="3000"
-            className="absolute inset-0 flex flex-col items-center justify-center"
-          >
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
             <h1 className="md:text-5xl text-white font-bold text-center px-4 mb-5">
               Welcome to
               <span className="text-indigo-500  bold">

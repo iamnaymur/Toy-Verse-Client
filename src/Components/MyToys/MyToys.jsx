@@ -47,6 +47,7 @@ const MyToys = () => {
       <h1 className="font-semibold text-3xl m-10">
         All of your selected toys are here given below..
       </h1>
+      
       <table className="table mx-auto ">
         <thead>
           <tr>
