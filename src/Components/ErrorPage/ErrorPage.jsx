@@ -12,10 +12,12 @@ const ErrorPage = () => {
           />
         </div>
 
-          <Link className="btn w-1/4 mx-auto hover:bg-yellow-400 bg-red-400 border-none" to="/">
-            Go Back to Homepage.
-          </Link>
-    
+        <Link
+          className="btn w-1/4 mx-auto hover:bg-yellow-400 bg-red-400 border-none"
+          to="/"
+        >
+          Go Back to Homepage.
+        </Link>
       </div>
     </>
   );

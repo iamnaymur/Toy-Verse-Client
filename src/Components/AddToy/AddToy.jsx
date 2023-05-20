@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../Authprovider/AuthProvider";
 import { toast } from "react-toastify";
+import DynamicPageTitle from "../DynamicPageTitle/DynamicPageTitle";
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
@@ -46,6 +47,7 @@ const AddToy = () => {
   };
   return (
     <div className="mt-10 text-xl text-center space-y-10">
+      <DynamicPageTitle title="Add Toy" />
       <div className="space-y-10">
         <h1 className="text-3xl font-semibold">
           What are you waiting for? <br /> Add your desired toy here.

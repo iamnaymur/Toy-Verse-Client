@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import ViewDetails from "../../AllToys/ViewDetails";
 import { AuthContext } from "../../Authprovider/AuthProvider";
+import DynamicPageTitle from "../../DynamicPageTitle/DynamicPageTitle";
 
 const CategoryDetails = () => {
   const toyDetails = useLoaderData();
@@ -20,6 +21,7 @@ const CategoryDetails = () => {
   } = toyDetails;
   return (
     <div>
+      <DynamicPageTitle title="Category Toy Details" />
       <div style={{ backgroundImage: "" }} className="mt-10">
         <h1 className="text-center text-3xl font-semibold">
           Here are some details below about the toy. Please check it out if you

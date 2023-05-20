@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import DynamicPageTitle from "../DynamicPageTitle/DynamicPageTitle";
 
 const ViewDetails = () => {
   const productDetails = useLoaderData();
@@ -18,6 +19,7 @@ const ViewDetails = () => {
 
   return (
     <div style={{ backgroundImage: "" }} className="mt-10">
+      <DynamicPageTitle title="Toy Details" />
       <h1 className="text-center text-3xl font-semibold">
         Here are some details below about the toy. Please check it out if you
         need!{" "}

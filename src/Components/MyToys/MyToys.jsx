@@ -3,6 +3,7 @@ import { AuthContext } from "../Authprovider/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import DynamicPageTitle from "../DynamicPageTitle/DynamicPageTitle";
 
 const MyToys = () => {
   const [addedToys, setAddedToys] = useState([]);
@@ -44,10 +45,11 @@ const MyToys = () => {
 
   return (
     <div>
+      <DynamicPageTitle title="My Toys" />
       <h1 className="font-semibold text-3xl m-10">
         All of your selected toys are here given below..
       </h1>
-      
+
       <table className="table mx-auto ">
         <thead>
           <tr>

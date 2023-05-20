@@ -1,6 +1,7 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
+import DynamicPageTitle from "../DynamicPageTitle/DynamicPageTitle";
 
 const UpdateToyData = () => {
   const toyData = useLoaderData();
@@ -32,6 +33,7 @@ const UpdateToyData = () => {
 
   return (
     <div>
+      <DynamicPageTitle title="Update Toy" />
       <form
         onSubmit={handleToyUpdateInfo}
         className="card-body mx-auto  w-2/4 mb-20 space-y-5"

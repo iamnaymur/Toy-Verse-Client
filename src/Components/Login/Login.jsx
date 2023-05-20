@@ -3,12 +3,17 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Authprovider/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
+import DynamicPageTitle from "../DynamicPageTitle/DynamicPageTitle";
 
 const Login = () => {
+  
   const { signIn, googleSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
+
+
+
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -44,6 +49,7 @@ const Login = () => {
   };
   return (
     <>
+      <DynamicPageTitle title="Login" />
       <p className="text-center text-3xl mt-10 bold">Login here now</p>
       <div>
         <div className="flex justify-center">

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import DynamicPageTitle from "../DynamicPageTitle/DynamicPageTitle";
 
 const AllToys = () => {
   const [allToyData, setAllToyData] = useState([]);
@@ -23,6 +24,7 @@ const AllToys = () => {
   }, [revalid]);
   return (
     <div className="mt-20">
+      <DynamicPageTitle title="All Toys" />
       <div className="flex justify-center">
         <input
           onChange={(event) => handleSearch(event.target.value)}
