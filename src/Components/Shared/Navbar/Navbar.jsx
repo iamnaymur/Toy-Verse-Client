@@ -11,7 +11,7 @@ const Navbar = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="navbar ">
+    <div className="navbar h-20 mb-5 rounded-2xl bg-gray-200">
       <div className="navbar-start">
         <div className="dropdown" >
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

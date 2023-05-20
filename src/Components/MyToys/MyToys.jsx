@@ -9,13 +9,17 @@ const MyToys = () => {
   const [addedToys, setAddedToys] = useState([]);
   const { user } = useContext(AuthContext);
 
-  console.log(addedToys);
+  const [sorting, setSorting] = useState("true");
+
+  const handleSorting = () => {
+    setSorting(!sorting);
+  };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/addedToys/${user?.email}`)
+    fetch(`http://localhost:5000/addedToys/${user?.email}?sort=${sorting}`)
       .then((res) => res.json())
       .then((data) => setAddedToys(data));
-  }, []);
+  }, [sorting]);
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -61,7 +65,14 @@ const MyToys = () => {
             <th>
               Seller & <br /> Seller's Email
             </th>
-            <th>Price</th>
+            <th>
+              Price <br />{" "}
+              <input
+                onClick={handleSorting}
+                type="checkbox"
+                className="toggle"
+              />
+            </th>
             <th>Quantity</th>
             <th>Rating</th>
             <th>Actions</th>
