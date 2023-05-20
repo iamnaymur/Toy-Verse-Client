@@ -14,14 +14,17 @@ import { Scrollbar } from "swiper";
 
 const TopCustomer = () => {
   return (
-    <div className="container mx-auto " >
+    <div className="container mx-auto mt-20">
+      <div className="text-center">
+        <h1 className="text-5xl bold">Some of our top customer's reviews!</h1>
+        <small>Swipe left to see more.</small>
+      </div>
       <Swiper
         scrollbar={{
           hide: true,
         }}
         modules={[Scrollbar]}
         className="mySwiper"
-        
       >
         <SwiperSlide>
           <div className="space-y-10">

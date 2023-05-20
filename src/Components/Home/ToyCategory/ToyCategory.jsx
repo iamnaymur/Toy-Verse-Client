@@ -19,11 +19,11 @@ const ToyCategory = () => {
 
   return (
     <div className="md:container mx-auto mt-20 ">
-      <h1 className=" text-center bold text-4xl mb-5">
+      <h1 className=" text-center bold text-5xl mb-5">
         Some categories of action figure toys. <br />
-        <span className="text-xl">Check it out!</span>
+        <span className="text-lg">Check it out!</span>
       </h1>
-      <div className="w-3/4 rounded-lg mx-auto mt-10 bg-orange-300 p-5">
+      <div className="w-3/4 rounded-lg mx-auto mt-10 bg-yellow-500 bg-opacity-70 p-5">
         <Tabs forceRenderTabPanel defaultIndex={1}>
           <TabPanel>
             <div>
@@ -39,7 +39,7 @@ const ToyCategory = () => {
                   <div className="md:grid gap-5 grid-cols-2  p-5">
                     {marvelToys.slice(0, 4).map((toy) => (
                       <div key={toy._id}>
-                        <div className="rounded-lg bg-base-100 shadow-xl">
+                        <div className="rounded-lg md:flex justify-center bg-base-100 shadow-xl">
                           <figure className="px-10 pt-10">
                             <img
                               src={toy.photo}
@@ -59,7 +59,7 @@ const ToyCategory = () => {
                             </p>
 
                             <Link to={`/viewCategoryDetails/${toy._id}`}>
-                              <button className="btn btn-sm border-none bg-indigo-500">
+                              <button className="btn btn-sm border-none bg-indigo-500  hover:bg-yellow-300">
                                 View Details
                               </button>
                             </Link>
@@ -73,7 +73,7 @@ const ToyCategory = () => {
                   <div className="md:grid gap-5 grid-cols-2 p-5">
                     {dcToys.slice(0, 4).map((toy) => (
                       <div key={toy._id}>
-                        <div className="rounded-lg bg-base-100 shadow-xl">
+                        <div className="rounded-lg bg-base-100 shadow-xl md:flex justify-center">
                           <figure className="px-10 pt-10">
                             <img
                               src={toy.photo}
@@ -93,7 +93,7 @@ const ToyCategory = () => {
                             </p>
 
                             <Link to={`/viewCategoryDetails/${toy._id}`}>
-                              <button className="btn btn-sm border-none bg-indigo-500">
+                              <button className="btn btn-sm border-none bg-indigo-500 hover:bg-yellow-300">
                                 View Details
                               </button>
                             </Link>
@@ -107,7 +107,7 @@ const ToyCategory = () => {
                   <div className="md:grid gap-5 grid-cols-2 p-5">
                     {transformersToys.slice(0, 4).map((toy) => (
                       <div key={toy._id}>
-                        <div className="rounded-lg bg-base-100 shadow-xl">
+                        <div className="rounded-lg bg-base-100 shadow-xl md:flex justify-center">
                           <figure className="px-10 pt-10">
                             <img
                               src={toy.photo}
@@ -127,7 +127,7 @@ const ToyCategory = () => {
                             </p>
 
                             <Link to={`/viewCategoryDetails/${toy._id}`}>
-                              <button className="btn btn-sm border-none bg-indigo-500">
+                              <button className="btn btn-sm border-none bg-indigo-500  hover:bg-yellow-400">
                                 View Details
                               </button>
                             </Link>

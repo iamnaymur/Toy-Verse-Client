@@ -72,7 +72,7 @@ const router = createBrowserRouter([
           fetch(`http://localhost:5000/addToys/${params.id}`),
       },
       {
-        path: "viewCategoryDetails/:id",
+        path: "/viewCategoryDetails/:id",
         element: (
           <PrivateROute>
             <CategoryDetails></CategoryDetails>

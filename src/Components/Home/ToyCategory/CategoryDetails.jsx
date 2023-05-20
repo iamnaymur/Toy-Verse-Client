@@ -4,10 +4,11 @@ import ViewDetails from "../../AllToys/ViewDetails";
 import { AuthContext } from "../../Authprovider/AuthProvider";
 
 const CategoryDetails = () => {
-    const toyDetails = useLoaderData();
-    const {user}= useContext(AuthContext)
+  const toyDetails = useLoaderData();
+  const { user } = useContext(AuthContext);
   console.log(toyDetails);
   const {
+    name,
     email,
     seller,
     price,
@@ -24,12 +25,13 @@ const CategoryDetails = () => {
           Here are some details below about the toy. Please check it out if you
           need!{" "}
         </h1>
-        <div className="card w-2/4 mx-auto mt-20 card-side bg-base-100 shadow-2xl">
+        <div className="card w-3/4 border border-indigo-400 mx-auto mt-20 card-side bg-base-100 shadow-indigo-500 shadow-2xl">
           <figure>
-            <img className="w-96 " src={photo} alt="Movie" />
+            <img className="w-[450px]" src={photo} alt="action figure" />
           </figure>
           <div className="card-body">
             <h2 className="card-title text-3xl">{name}</h2>
+
             <p>
               <span className="bold">Seller Name</span> : {seller}
             </p>
@@ -55,7 +57,6 @@ const CategoryDetails = () => {
         </div>
       </div>
     </div>
-    
   );
 };
 

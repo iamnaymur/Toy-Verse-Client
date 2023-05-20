@@ -2,7 +2,7 @@ import React from "react";
 
 const Subscription = () => {
   return (
-    <div className="bg-pink-200 flex justify-evenly">
+    <div className="bg-pink-100 flex justify-evenly mb-5">
       <div>
               <img
           src="https://i.ibb.co/R4KDdmf/Screenshot-2023-05-19-211904-removebg-preview.png"

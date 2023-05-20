@@ -17,11 +17,14 @@ const ViewDetails = () => {
   } = productDetails;
 
   return (
-    <div style={{backgroundImage:''}} className="mt-10">
-      <h1 className="text-center text-3xl font-semibold">Here are some details below about the toy. Please check it out if you need! </h1>
-      <div className="card w-2/4 mx-auto mt-20 card-side bg-base-100 shadow-2xl">
+    <div style={{ backgroundImage: "" }} className="mt-10">
+      <h1 className="text-center text-3xl font-semibold">
+        Here are some details below about the toy. Please check it out if you
+        need!{" "}
+      </h1>
+      <div className="card w-3/4 border border-indigo-400 mx-auto mt-20 card-side bg-base-100 shadow-indigo-500 shadow-2xl">
         <figure>
-          <img className="w-96 " src={photo} alt="Movie" />
+          <img className="w-[450px]" src={photo} alt="action figure" />
         </figure>
         <div className="card-body">
           <h2 className="card-title text-3xl">{name}</h2>
@@ -46,7 +49,6 @@ const ViewDetails = () => {
           <p>
             <span className="bold">Description</span>: {description}
           </p>
-         
         </div>
       </div>
     </div>

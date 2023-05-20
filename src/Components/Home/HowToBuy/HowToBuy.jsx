@@ -1,8 +1,10 @@
 import React from "react";
+{/* <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />;
+ <script src="bower_components/aos/dist/aos.js"></script>;  */}
 
 const HowToBuy = () => {
   return (
-    <div className="mt-20">
+    <div data-aos="fade-up" className="mt-20">
       <h2 className="bold text-center text-5xl">How to Buy?</h2>
       <div className="container mx-auto mt-10 grid gap-4 grid-cols-1 md:grid-cols-3">
         <div>
