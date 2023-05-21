@@ -20,12 +20,12 @@ const ToyCategory = () => {
   // console.log(marvelToys);
 
   return (
-    <div className="md:container mx-auto mt-20 ">
+    <div className=" mt-20 ">
       <h1 className=" text-center bold text-5xl mb-5">
         Some categories of action figure toys. <br />
         <span className="text-lg">Check it out!</span>
       </h1>
-      <div className="w-3/4 rounded-lg mx-auto mt-10 bg-yellow-500 bg-opacity-70 p-5">
+      <div className="md:w-3/4  rounded-lg mx-auto mt-10 bg-indigo-300 bg-opacity-70 p-5">
         <Tabs forceRenderTabPanel defaultIndex={1}>
           <TabPanel>
             <div>
@@ -38,15 +38,15 @@ const ToyCategory = () => {
                   </TabList>
                 </div>
                 <TabPanel>
-                  <div className="md:grid gap-5 grid-cols-2  p-5">
+                  <div className="md:grid gap-10 grid-cols-2  p-5">
                     {marvelToys.slice(0, 4).map((toy) => (
                       <div key={toy._id}>
-                        <div className="rounded-lg md:flex justify-center bg-base-100 shadow-xl">
+                        <div className="rounded-lg  md:flex justify-center bg-base-100 shadow-xl">
                           <figure className="px-10 pt-10">
                             <img
                               src={toy.photo}
                               alt="Shoes"
-                              className="rounded-xl w-auto h-52 "
+                              className="rounded-xl w-auto h-96 md:h-52 "
                             />
                           </figure>
                           <div className="card-body items-start text-center">
@@ -72,7 +72,7 @@ const ToyCategory = () => {
                   </div>
                 </TabPanel>
                 <TabPanel>
-                  <div className="md:grid gap-5 grid-cols-2 p-5">
+                  <div className="md:grid gap-10  grid-cols-2 p-5">
                     {dcToys.slice(0, 4).map((toy) => (
                       <div key={toy._id}>
                         <div className="rounded-lg bg-base-100 shadow-xl md:flex justify-center">
@@ -80,7 +80,7 @@ const ToyCategory = () => {
                             <img
                               src={toy.photo}
                               alt="Shoes"
-                              className="rounded-xl w-auto h-52"
+                              className="rounded-xl w-auto h-96 md:h-52 "
                             />
                           </figure>
                           <div className="card-body items-start text-center">
@@ -106,7 +106,7 @@ const ToyCategory = () => {
                   </div>
                 </TabPanel>
                 <TabPanel>
-                  <div className="md:grid gap-5 grid-cols-2 p-5">
+                  <div className="md:grid gap-10  grid-cols-2 p-5">
                     {transformersToys.slice(0, 4).map((toy) => (
                       <div key={toy._id}>
                         <div className="rounded-lg bg-base-100 shadow-xl md:flex justify-center">
@@ -114,7 +114,7 @@ const ToyCategory = () => {
                             <img
                               src={toy.photo}
                               alt="Shoes"
-                              className="rounded-xl w-auto h-52"
+                              className="rounded-xl w-auto h-96 md:h-52 "
                             />
                           </figure>
                           <div className="card-body items-start text-center">

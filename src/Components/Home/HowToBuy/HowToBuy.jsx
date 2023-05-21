@@ -5,8 +5,11 @@ const HowToBuy = () => {
   return (
     <div className="mt-20">
       <h2 className="bold text-center text-5xl">How to Buy?</h2>
-      <div className="container mx-auto mt-10 grid gap-4 grid-cols-1 md:grid-cols-3">
-        <div data-aos="fade-right">
+      <div
+        data-aos="zoom-in"
+        className="container mx-auto mt-10 grid gap-4 grid-cols-1 md:grid-cols-3"
+      >
+        <div>
           <div className="flex justify-center">
             <img
               src="https://i.ibb.co/W3wQWzW/15-157975-cartoon-iron-man-png-iron-man-chibi-png-removebg-preview-2.png"
@@ -41,7 +44,7 @@ const HowToBuy = () => {
             </p>
           </div>
         </div>
-        <div data-aos="fade-left">
+        <div>
           <div className="flex justify-center">
             <img
               src="https://i.ibb.co/c1V80cy/delivery-box-open-cartoon-vector-19323833-removebg-preview.png"
